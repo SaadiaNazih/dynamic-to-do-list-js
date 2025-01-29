@@ -1,7 +1,12 @@
 document.addEventListener("DOMContentLoaded", () => {
-    const addButton = document.getElementById('Add Task');
-    const taskInput = document.getElementById(id="task-input");
-    const taskList = document.getElementById(id="task-list");
+    // Select the "Add Task" button and store it in a constant named addButton
+const addButton = document.getElementById('add-task-btn');
+
+// Select the input field where users enter tasks and store it in a constant named taskInput
+const taskInput = document.getElementById('task-input');
+
+// Select the unordered list that will display the tasks and store it in a constant named taskList
+const taskList = document.getElementById('task-list');
 
 
     addTaskBtn.addEventListener("click", () => {
