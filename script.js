@@ -1,13 +1,14 @@
 document.addEventListener("DOMContentLoaded", () => {
-    const taskInput = document.getElementById("task-input");
-    const addTaskBtn = document.getElementById("add-task-btn");
-    const taskList = document.getElementById("task-list");
+    const addButton = document.getElementById('add-task-button');
+    const taskInput = document.getElementById('task-input');
+    const taskList = document.getElementById('task-list');
+
 
     addTaskBtn.addEventListener("click", () => {
-        const taskText = taskInput.value.trim();
+        const taskText = addButton.value.trim();
         if (taskText !== "") {
             addTask(taskText);
-            taskInput.value = "";
+            addButton.value = "";
         }
     });
 
