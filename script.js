@@ -5,7 +5,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
     addTaskBtn.addEventListener("click", () => {
         const taskText = taskInput.value.trim();
-        console.log("Task text:", taskText);  // Debug log
         if (taskText !== "") {
             addTask(taskText);
             taskInput.value = "";
@@ -19,7 +18,6 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
     function addTask(task) {
-        console.log("Adding task:", task);  // Debug loge
         const li = document.createElement("li");
         li.textContent = task;
         const deleteBtn = document.createElement("button");
