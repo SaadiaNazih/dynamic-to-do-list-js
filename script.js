@@ -23,39 +23,42 @@ const taskList = document.getElementById('task-list');
         }
     });
 
-    // Define the addTask function
     function addTask() {
-        // Recupera il valore dell'input dell'attività
+        // Get the task input value
         const taskText = taskInput.value.trim();
     
-        // Controlla se taskText non è vuoto
+        // Check if taskText is not empty
         if (taskText !== "") {
-            // Crea un nuovo elemento li
+            // Create a new li element
             const li = document.createElement("li");
             li.textContent = taskText;
     
-            // Crea un nuovo elemento pulsante per rimuovere l'attività
+            // Create a new button element for removing the task
             const removeBtn = document.createElement("button");
             removeBtn.textContent = "Remove";
             removeBtn.className = "remove-btn";
     
-            // Assegna un evento onclick al pulsante remove
+            // Assign an onclick event to the remove button
             removeBtn.onclick = function() {
                 taskList.removeChild(li);
             };
     
-            // Aggiungi il pulsante di rimozione all'elemento li
+            // Append the remove button to the li element
             li.appendChild(removeBtn);
     
-            // Aggiungi li a taskList
+            // Append the li to taskList
             taskList.appendChild(li);
     
-            // Cancella il campo di input dell'attività
+            // Clear the task input field
             taskInput.value = "";
         } else {
-            alert("Per favore, inserisci un'attività.");
+            alert("Please enter a task.");
         }
     }
     
+    
 });
+
+
+
 
